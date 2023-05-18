@@ -14,7 +14,7 @@ public class SingletonDriver {
           // System.setProperty("webdriver.chrome.driver", ".//src/main/driver/chromedriver");
                 //  driver = new ChromeDriver();
 
-            System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+           System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 
 
             ChromeOptions options = new ChromeOptions();
