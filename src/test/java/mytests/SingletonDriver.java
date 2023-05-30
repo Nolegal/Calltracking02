@@ -12,7 +12,7 @@ public class SingletonDriver {
     public static WebDriver getSingletonInstance() {
         if (null == driver) {
            //System.setProperty("webdriver.chrome.driver", ".//src/main/driver/chromedriver");
-                //  driver = new ChromeDriver();
+                  driver = new ChromeDriver();
 
            System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 
