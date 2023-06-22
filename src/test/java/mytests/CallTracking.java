@@ -15,9 +15,9 @@ public class CallTracking {
 
     @Test
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
+       // System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
 
-          WebDriver driver=new ChromeDriver();
+        //  WebDriver driver=new ChromeDriver();
 
 /*
         driver.manage().window().maximize();
@@ -27,7 +27,7 @@ public class CallTracking {
 */
 
 
-         /*
+
          System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 
         WebDriver driver;
@@ -35,7 +35,7 @@ public class CallTracking {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
         driver = new ChromeDriver(options);
-         */
+
         driver.get("https://calltracking.ru/testqa/index.php?utm_source=google&utm_medium=cpc");
         Thread.sleep(3000);
         WebElement phone= driver.findElement(By.xpath("/html[1]/body[1]/div[1]/header[1]/div[2]/a[1]"));
