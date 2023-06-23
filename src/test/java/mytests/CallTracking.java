@@ -95,7 +95,7 @@ public class CallTracking {
             System.out.println("email2 is changed");
         }
         else {
-            Reporter.log(mail2+"emailtracking not working");
+            System.out.println(mail2+"emailtracking not working");
         }
 
         ((JavascriptExecutor) driver).executeScript("window.open()");
@@ -105,26 +105,26 @@ public class CallTracking {
 
         WebElement phone3= driver.findElement(By.xpath("/html[1]/body[1]/div[1]/header[1]/div[2]/a[1]"));
         String text3= phone3.getText();
-        Reporter.log(text3);
+        System.out.println(text3);
 
 
         if (text3.contains("+7 (495) 357-05-96")) {
-            Reporter.log("number 3 is same");
+            System.out.println("number 3 is same");
         }
 
         else {
-            Reporter.log(text3+"calltracking is hucked");
+            System.out.println(text3+"calltracking is hucked");
         }
 
         WebElement email3= driver.findElement(By.xpath("/html[1]/body[1]/div[1]/main[1]/div[1]/aside[1]"));
         String mail3= email3.getText();
-        Reporter.log(mail3);
+        System.out.println(mail3);
 
         if (mail3.contains("test.email.v114+")){
-            Reporter.log("email3 is changed");
+            System.out.println("email3 is changed");
         }
         else {
-            Reporter.log(mail3+"emailtracking not working");
+            System.out.println(mail3+"emailtracking not working");
         }
 
         /*((JavascriptExecutor) driver).executeScript("window.open()");
