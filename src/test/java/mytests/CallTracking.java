@@ -17,7 +17,7 @@ public class CallTracking {
 
     @Test
     public static void main(String[] args) throws InterruptedException {
-       // System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
+        //System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
 
         //  WebDriver driver=new ChromeDriver();
 
@@ -42,31 +42,31 @@ public class CallTracking {
         Thread.sleep(3000);
         WebElement phone= driver.findElement(By.xpath("/html[1]/body[1]/div[1]/header[1]/div[2]/a[1]"));
         String text= phone.getText();
-        System.out.println(text);
+       System.out.println(text);
 
 
         if (text.contains("+7 (495) 367-29-93")) {
-            Reporter.log("number is changed 1st");
+            System.out.println("number is changed 1st");
         }
          else if (text.contains("+7 (499) 558-58-47")) {
-            Reporter.log("number is changed 2nd");
+            System.out.println("number is changed 2nd");
         }
         else if (text.contains("+7 (499) 406-17-63")) {
-            Reporter.log("number is changed 3rd");
+            System.out.println("number is changed 3rd");
         }
         else {
-            Reporter.log(text+"calltracking not working");
+            System.out.println(text+"calltracking not working");
         }
 
         WebElement email= driver.findElement(By.xpath("/html[1]/body[1]/div[1]/main[1]/div[1]/aside[1]"));
         String mail= email.getText();
-        Reporter.log(mail);
+        System.out.println(mail);
 
         if (mail.contains("test.email.v114+")){
-            Reporter.log("email is changed");
+            System.out.println("email is changed");
         }
         else {
-            Reporter.log(mail+"emailtracking not working");
+            System.out.println(mail+"emailtracking not working");
         }
 
         ((JavascriptExecutor) driver).executeScript("window.open()");
@@ -76,23 +76,23 @@ public class CallTracking {
 
         WebElement phone2= driver.findElement(By.xpath("/html[1]/body[1]/div[1]/header[1]/div[2]/a[1]"));
         String text2= phone2.getText();
-        Reporter.log(text2);
+        System.out.println(text2);
 
 
         if (text2.contains("+7 (499) 558-35-93")) {
-            Reporter.log("number 2 is changed");
+            System.out.println("number 2 is changed");
         }
 
         else {
-            Reporter.log(text2+"calltracking not working");
+            System.out.println(text2+"calltracking not working");
         }
 
         WebElement email2= driver.findElement(By.xpath("/html[1]/body[1]/div[1]/main[1]/div[1]/aside[1]"));
         String mail2= email2.getText();
-        Reporter.log(mail2);
+        System.out.println(mail2);
 
         if (mail2.contains("test.email.v114+")){
-            Reporter.log("email2 is changed");
+            System.out.println("email2 is changed");
         }
         else {
             Reporter.log(mail2+"emailtracking not working");
