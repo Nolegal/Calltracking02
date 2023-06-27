@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 public class CallTracking {
-
+protected static Logger log=LogManager.getLogger();
 
     @Test
     public static void main(String[] args) throws InterruptedException {
