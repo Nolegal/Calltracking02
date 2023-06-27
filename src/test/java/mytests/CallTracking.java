@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
+import org.testng.Assert;
 import org.testng.Reporter;
 
 
@@ -38,8 +39,8 @@ public class CallTracking {
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-
 */
+
 
 
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
@@ -52,6 +53,10 @@ public class CallTracking {
 
         driver.get("https://calltracking.ru/testqa/index.php?utm_source=google&utm_medium=cpc");
         Thread.sleep(3000);
+         String expectedTitle = "First";
+         String actualTitle= driver.getTitle();
+         Assert.assertEquals(actualTitle,expectedTitle);
+
         WebElement phone= driver.findElement(By.xpath("/html[1]/body[1]/div[1]/header[1]/div[2]/a[1]"));
         String text= phone.getText();
       // System.out.println(text);
@@ -163,7 +168,7 @@ public class CallTracking {
         driver.switchTo().window(tabs2.get(2));
         driver.get("https://calltracking.ru/testqa/index.php?utm_source=google&utm_medium=cpc"); */
 
-
+       driver.quit();
     }
 
 
