@@ -24,9 +24,9 @@ public class CallTracking {
     public static void main(String[] args) throws InterruptedException {
         Logger log= LogManager.getLogger();
 
-        String log4jConfPath = "/src/main/resources/log4j.properties";
+       // String log4jConfPath = "/src/main/resources/log4j.properties";
 
-        PropertyConfigurator.configure(log4jConfPath);
+        //PropertyConfigurator.configure(log4jConfPath);
 
         System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
 
@@ -41,7 +41,7 @@ public class CallTracking {
 
 
 
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+      //  System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 
        // WebDriver driver;
 
