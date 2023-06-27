@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import org.testng.Reporter;
 
 
-import org.apache.log4j.PropertyConfigurator;
+//import org.apache.log4j.PropertyConfigurator;
 
 
 import java.util.ArrayList;
