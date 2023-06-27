@@ -1,5 +1,6 @@
 package mytests;
 import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -8,8 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 import org.testng.Reporter;
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
+
+
 import org.apache.log4j.PropertyConfigurator;
 
 
@@ -27,7 +28,7 @@ public class CallTracking {
        // String log4jConfPath = "/src/main/resources/log4j.properties";
 
         //PropertyConfigurator.configure(log4jConfPath);
-
+/*
         System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
 
           WebDriver driver=new ChromeDriver();
@@ -38,16 +39,16 @@ public class CallTracking {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 
+*/
 
 
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 
-      //  System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        WebDriver driver;
 
-       // WebDriver driver;
-
-        //ChromeOptions options = new ChromeOptions();
-        //options.addArguments("headless");
-       // driver = new ChromeDriver(options);
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("headless");
+        driver = new ChromeDriver(options);
 
         driver.get("https://calltracking.ru/testqa/index.php?utm_source=google&utm_medium=cpc");
         Thread.sleep(3000);
