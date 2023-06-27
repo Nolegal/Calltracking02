@@ -10,16 +10,21 @@ import org.testng.annotations.Test;
 import org.testng.Reporter;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
-
+import org.apache.log4j.PropertyConfigurator;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 public class CallTracking {
-protected static Logger log=LogManager.getLogger();
 
+
+    protected static Logger log=LogManager.getLogger();
     @Test
     public static void main(String[] args) throws InterruptedException {
         Logger log= LogManager.getLogger();
+
+        String log4jConfPath = "/src/main/resources/log4j.properties";
+
+        PropertyConfigurator.configure(log4jConfPath);
 
   /*      System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
 
